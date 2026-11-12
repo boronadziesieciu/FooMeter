@@ -1,33 +1,48 @@
-# FooMeter Linux preview
+# FooMeter Linux · expanded interface
 
-An experimental Linux frontend based on FooMeter 0.10.29, intended for testing
-on CachyOS with Hyprland/XWayland. This is an initial preview, not a feature-complete
-Linux release.
+**[Download the updated Linux x64 app](https://github.com/boronadziesieciu/FooMeter/raw/refs/heads/linux-preview/linux-preview/FooMeter-linux-x64-preview.tar.gz)** ·
+**[CachyOS setup and controls](README-LINUX.md)** ·
+[Source ZIP](https://github.com/boronadziesieciu/FooMeter/raw/refs/heads/linux-preview/linux-preview/FooMeter-linux-preview-source.zip) ·
+[Browse/build the source](source/) · [Checksums](SHA256SUMS.txt)
 
-- **[Download the Linux x64 app (43 MB)](https://github.com/boronadziesieciu/FooMeter/raw/refs/heads/linux-preview/linux-preview/FooMeter-linux-x64-preview.tar.gz)** — .NET is included.
-- [Download the modified source](https://github.com/boronadziesieciu/FooMeter/raw/refs/heads/linux-preview/linux-preview/FooMeter-linux-preview-source.zip)
-- **[Read the CachyOS setup guide](README-LINUX.md)** — required packages and dumpcap permissions.
-- [SHA-256 checksums](SHA256SUMS.txt)
+Close the older copy, extract the updated archive into a fresh folder, and run
+`./run-foometer.sh`. Your Linux settings, pets and history remain in the same
+user profile. .NET is included. Use `--demo` to explore without live capture.
 
-Extract the application archive, open a terminal in `FooMeter-linux-x64`, and run:
+This update rebuilds the interface around the original FooMeter 0.10.29 core:
 
-```sh
-./run-foometer.sh --demo
-```
+- Compact combat overlay with class icons, damage/healing views, strip mode,
+  colors, scaling, opacity, position locking, observed GS/CP and boss forecasts.
+- Persistent settings: General, Capture, Appearance, Events, Pets, Share, Scores
+  and Linux integration, including import/export.
+- Capture adapter/port controls and automatic restart with the saved adapter.
+- Complete skill breakdowns with sorting and a damage timeline.
+- Searchable fight history with comparison, JSON/CSV exports, deletion and chat copy.
+- Separate event and pet windows with independent appearance and positions,
+  all 207 pet portraits, pins, filters and soul pickup cards.
+- Tray controls, timer notifications, local reminders and Hyprland command bindings.
+- X11 click-through with Alt interaction and an independent recovery command.
+- Optional grim/slurp/Tesseract loot-row recognition and transparent counters.
 
-Close the demo and run `./run-foometer.sh` for live capture after completing the
-capture-permission setup in the guide. Start capture before entering your character.
-Run the app as your normal desktop user.
+See the guide for dependencies, optional screenshot tools, command bindings and
+limitations. Live game behavior, Hyprland stacking, native Wayland Alt handling,
+tray/notification hosting and screencopy still need desktop testing. This is an
+experimental Linux rebuild, not a claim of full compatibility with every game
+patch or compositor configuration. The Windows installer/updater is replaced by
+Linux package downloads.
 
-Included: combat and skill views, observed GS/CP, event and boss timers, pet
-progress and saved fight history. Not yet ported: loot-row OCR, click-through/Alt
-interaction, global hotkeys, tray integration, appearance settings and export UI.
+Validation includes all 555 core checks, Linux persistence/export/OCR checks,
+real Tesseract recognition on synthetic text, real dumpcap enumeration/error
+handling, and X11 UI tests for every settings tab, settings edits, history
+comparison, IPC and click-through restoration.
 
-Validation: 555 core checks passed, Linux model and X11 UI smoke checks passed,
-and real dumpcap adapter enumeration/failure handling passed. Live game traffic,
-CachyOS capture permissions and Hyprland window stacking still require testing
-on the user's machine.
+The screenshots use synthetic combat and unknown pet totals, not live game data.
 
-The screenshot below uses synthetic demo data.
+![Combat overlay](FooMeter-linux-preview.png)
+![Settings](FooMeterSettings.png)
+![Pets](FooMeterPets.png)
+![Events](FooMeterEvents.png)
+![History](FooMeterFighthistory.png)
+![Skills](FooMeterSkillbreakdown.png)
 
-![FooMeter Linux preview showing synthetic combat](FooMeter-linux-preview.png)
+The original minimal preview remains available from [its historical commit](https://github.com/boronadziesieciu/FooMeter/tree/c01f518603ed09e3773f99cedcca3f12ce62dcbf/linux-preview).

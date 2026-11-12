@@ -1,0 +1,19 @@
+The Linux frontend additionally uses the following packages:
+
+Avalonia UI 11.3.8 (including Desktop, Fluent theme and Inter font packaging)
+Copyright (c) The AvaloniaUI Project. MIT.
+https://github.com/AvaloniaUI/Avalonia
+
+Tmds.DBus.Protocol 0.21.3, MIT
+https://github.com/tmds/Tmds.DBus
+
+SkiaSharp and HarfBuzzSharp (transitive native rendering dependencies), MIT
+https://github.com/mono/SkiaSharp
+
+Inter typeface, SIL Open Font License 1.1
+https://github.com/rsms/inter
+
+The self-contained .NET runtime includes its LICENSE.txt and
+ThirdPartyNotices.txt. Original notices in this directory remain applicable to
+the shared source. dumpcap is a separately installed distribution package and
+is not bundled in the Linux download.

@@ -1,0 +1,61 @@
+{
+  "Copyright": "NCSOFT game artwork; not relicensed as application code",
+  "Source": "https://github.com/SkeeveAN/Aion-DPS-Meter",
+  "Revision": "03026182c4ae2059b41804189852af6e945e365a",
+  "Files": [
+    {
+      "Class": "Gladiator",
+      "Path": "Client/assets/classes/icons/Gladiator.png",
+      "GitBlobSHA1": "832826464b256d7896663382c983a7da69593fe6",
+      "SHA256": "b79786daa274aae6c51bfc85e58698b0cd38bd9302613ead0f3f3549ebc201c7"
+    },
+    {
+      "Class": "Templar",
+      "Path": "Client/assets/classes/icons/Templar.png",
+      "GitBlobSHA1": "d192237a67fd70ec03fda891bd8be6efaf964f77",
+      "SHA256": "cbbac0c96d13e2d87f9ffad77b846c3fc401736dec825c36a836013f8fd46dd7"
+    },
+    {
+      "Class": "Assassin",
+      "Path": "Client/assets/classes/icons/Assassin.png",
+      "GitBlobSHA1": "67eb0ac6389624c476f08283d6c8a1bb8728a215",
+      "SHA256": "2e49f0b895ff3f8a3f388d8abe5c3d82c69d2469ab677e5ccce101879e061176"
+    },
+    {
+      "Class": "Ranger",
+      "Path": "Client/assets/classes/icons/Ranger.png",
+      "GitBlobSHA1": "7297b60c775d522fdd83e632b98b346355dbb170",
+      "SHA256": "224c96d38cbc826cdf221014cf82ecd1ab9bd1ca7494ba54784244b89fe3c6b1"
+    },
+    {
+      "Class": "Sorcerer",
+      "Path": "Client/assets/classes/icons/Sorcerer.png",
+      "GitBlobSHA1": "ee559fc4ec6e48b7b2fdd55103c827a69b315452",
+      "SHA256": "b3ba407b7a14ee716dac315fe605c86a40ff09e10a26b95dab797f721bb70f83"
+    },
+    {
+      "Class": "Spiritmaster",
+      "Path": "Client/assets/classes/icons/Spiritmaster.png",
+      "GitBlobSHA1": "77a0e060ec2c12581c15ab13c83769eec5eb9508",
+      "SHA256": "56d5c3c11f583b8cad6c898140cffbcf6fb52963e0cf8d4d7aefeaf14bad74f1"
+    },
+    {
+      "Class": "Cleric",
+      "Path": "Client/assets/classes/icons/Cleric.png",
+      "GitBlobSHA1": "62515a1c1958d9001fcb8106fbb39bea4c2e0fff",
+      "SHA256": "19f28911804a467687f7226c0ae5d7714a03cf8b9ed8e8b1489488494a27461e"
+    },
+    {
+      "Class": "Chanter",
+      "Path": "Client/assets/classes/icons/Chanter.png",
+      "GitBlobSHA1": "57b0f1cf7c62f5b781769ae63275565755fbc143",
+      "SHA256": "8d10c069d4cd9bce6d9e64a9db5be07b9d0dd58e9d50f05f71a60ea6a4389fe8"
+    },
+    {
+      "Class": "Brawler",
+      "Path": "Client/assets/classes/icons/Brawler.png",
+      "GitBlobSHA1": "62c8b09a2cade281b577182906589f481d98cfc1",
+      "SHA256": "b6b5bf08048f1b7620a46f41b6da744b2e5ccb3cd86b2a17cb788561c4a80569"
+    }
+  ]
+}

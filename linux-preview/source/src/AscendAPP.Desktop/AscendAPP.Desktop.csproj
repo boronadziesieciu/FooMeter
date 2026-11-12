@@ -1,0 +1,42 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AssemblyName>FooMeter</AssemblyName>
+    <Product>FooMeter</Product>
+    <Title>FooMeter</Title>
+    <Description>Combat, events and pet-soul progress for Aion 2</Description>
+    <Version>0.10.29</Version>
+    <AssemblyVersion>0.10.29.0</AssemblyVersion>
+    <FileVersion>0.10.29.0</FileVersion>
+    <ApplicationIcon>Assets\FooMeter.ico</ApplicationIcon>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="../../THIRD_PARTY_NOTICES/*" Link="THIRD_PARTY_NOTICES/%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" />
+    <Using Remove="System.Windows.Forms" /><Using Remove="System.Drawing" />
+    <ProjectReference Include="../AscendAPP.Core/AscendAPP.Core.csproj" />
+    <PackageReference Include="Tesseract" Version="5.2.0" />
+    <PackageReference Include="SharpPcap" Version="6.3.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Assets/Classes/*.png" />
+    <None Remove="Assets/Pets/*.png" />
+    <None Include="Assets/Ocr/pet-words.txt" Link="tessdata/pet-words.txt" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="Assets/Ocr/eng.traineddata" Link="tessdata/eng.traineddata" CopyToOutputDirectory="PreserveNewest" />
+    <EmbeddedResource Include="Assets/Pets/*.png" LogicalName="FooMeter.Pets.%(Filename)%(Extension)" />
+    <EmbeddedResource Include="Assets/Classes/*.png" LogicalName="AscendAPP.Classes.%(Filename)%(Extension)" />
+    <None Include="../../samples/elyos-showcase.jsonl" Link="samples/elyos-showcase.jsonl" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="../../data/boss_berserk.json" Link="data/boss_berserk.json" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="../../data/field_bosses.json" Link="data/field_bosses.json" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="../../data/recurring_events.json" Link="data/recurring_events.json" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="../../data/targets.json" Link="data/targets.json" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="../../data/pet_names.json" Link="data/pet_names.json" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="../../data/ticket_names.json" Link="data/ticket_names.json" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="../../data/boss_names.json" Link="data/boss_names.json" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+</Project>

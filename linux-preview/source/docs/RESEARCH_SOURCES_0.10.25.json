@@ -1,0 +1,44 @@
+{
+  "Date": "2026-11-02",
+  "Scope": "Public documentation, tutorial data and repository architecture only; no binary decompilation, installation or execution",
+  "Repositories": [
+    {
+      "Repository": "karim-mo/aion2-abysslogs-dps-meter",
+      "Revision": "4aa713be8532ff16edc70ca0eb950d491aa409fe",
+      "License": null,
+      "Files": 8,
+      "Truncated": false
+    },
+    {
+      "Repository": "Not4You-Dev/NotMeter-Releases",
+      "Revision": "2c80079e7bb9df3d6821d35f891efa5d2c58647a",
+      "License": null,
+      "Files": 1,
+      "Truncated": false
+    },
+    {
+      "Repository": "Not4You-Dev/NotMeter-Web",
+      "Revision": "65adc215095b3c86f3706fe9164a72315049d004",
+      "License": null,
+      "Files": 203,
+      "Truncated": false
+    }
+  ],
+  "PublicPages": [
+    "https://github.com/karim-mo/aion2-abysslogs-dps-meter",
+    "https://abysslogs.com/",
+    "https://notmeter.com/tutorial.html?lang=en&screen=en",
+    "https://github.com/Not4You-Dev/NotMeter-Releases",
+    "https://github.com/Not4You-Dev/NotMeter-Web"
+  ],
+  "GuideFiles": [
+    {
+      "File": "notmeter-guide-en.js",
+      "SHA256": "b1b0c0aeb5b8eebbb30ffa610b2d2f891292e496b6ad504d7cf292a21bd0ef8b"
+    },
+    {
+      "File": "notmeter-guide-current.js",
+      "SHA256": "52bd7534704eef7f4ea192969280ba3884080df2e735d8ebe7d43799cb99b15c"
+    }
+  ]
+}

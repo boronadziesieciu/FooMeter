@@ -1,0 +1,12 @@
+AION 2 pet portraits
+Copyright © NCSOFT / NC. These game images are not licensed under the application source-code MIT notices.
+
+207 portraits were matched by numeric pet ID against the public Aion2.app pet index:
+https://aion2.app/db/pets
+Individual source pages: https://aion2.app/db/pets/{petId}
+Image origin: https://aion2.app/db-item-icons/UT_Vehicle_Portrait_*.webp
+Reviewed 2 November 2026.
+
+Only small portraits are included. Website layout, prose, code, advertisements, map images and spawn datasets were not copied.
+The original portraits were decoded and resized to 64x64 PNG thumbnails for offline Windows display. The data/pet_art_sources.json manifest records each ID, name, source URL, original hash and thumbnail hash.
+The portraits remain NCSOFT game artwork and are included to identify those pets in this unofficial companion application. No claim of authorship or general redistribution license is made for the game artwork.

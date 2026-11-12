@@ -1,0 +1,49 @@
+{
+  "Version": "0.10.26",
+  "Date": "2026-11-02",
+  "Build": {
+    "Warnings": 0,
+    "Errors": 0
+  },
+  "CoreChecks": 479,
+  "NativeWpfChecks": 178,
+  "TotalChecks": 657,
+  "LiveGameVerified": false,
+  "NativeGameCaptureStarted": false,
+  "History": {
+    "Version": 1,
+    "LocalOnly": true,
+    "MaxFights": 80,
+    "MaxBytes": 16777216,
+    "MaxFightBytes": 2097152,
+    "AtomicWrites": true,
+    "BackgroundWriter": true,
+    "ExitFlush": true,
+    "RecoveryCopy": true,
+    "ExclusiveWriterLease": true,
+    "DemoAndReplayExcluded": true
+  },
+  "Strip": {
+    "Default": false,
+    "Hotkey": "Ctrl+Shift+F6",
+    "LogicalWidth": 680,
+    "SameOverlay": true,
+    "NoCombatReset": true
+  },
+  "CaptureStates": [
+    "Stopped",
+    "Error",
+    "NoPackets",
+    "NoPayloads",
+    "NoFrames",
+    "CharacterRefresh",
+    "NoEvents",
+    "UnknownPlayer",
+    "Filtered",
+    "Ready",
+    "Combat",
+    "Quiet",
+    "Demo",
+    "Replay"
+  ]
+}

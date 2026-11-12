@@ -1,0 +1,28 @@
+{
+  "source": "SkeeveAN/Aion-DPS-Meter @ 53033afadf3395dd47708abb308346734d8b1a8a; MIT. Explicit Verteron map/NPC/slot identities only. Respawn times must come from the game map list; no cycles or screenshot countdowns imported.",
+  "mapId": 1010,
+  "mapName": "Verteron",
+  "slotCount": 24,
+  "bosses": [
+    {
+      "npc": 2101074,
+      "slot": 21,
+      "name": "Eternal Gartua"
+    },
+    {
+      "npc": 2101120,
+      "slot": 22,
+      "name": "Silent Dartan"
+    },
+    {
+      "npc": 2101122,
+      "slot": 23,
+      "name": "Soul Ruler Kashapa"
+    },
+    {
+      "npc": 2101131,
+      "slot": 24,
+      "name": "High Commander Lagta"
+    }
+  ]
+}

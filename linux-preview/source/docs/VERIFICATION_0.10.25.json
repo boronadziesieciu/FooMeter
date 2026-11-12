@@ -1,0 +1,35 @@
+{
+  "Version": "0.10.25",
+  "Date": "2026-11-02",
+  "Build": {
+    "Warnings": 0,
+    "Errors": 0
+  },
+  "CoreChecks": 453,
+  "NativeWpfChecks": 154,
+  "TotalChecks": 607,
+  "LiveGameVerified": false,
+  "LiveCaptureStarted": false,
+  "CompetitorBinariesExecuted": false,
+  "ResearchScope": "Official public documentation, tutorials and repository metadata; no binary decompilation",
+  "TrackerImplementationRemoved": true,
+  "ManualSkillTimersRemoved": true,
+  "PublicProfileRequestsRemoved": true,
+  "RemainingOverlays": [
+    "DPS meter",
+    "Events"
+  ],
+  "SettingsMigrationVerified": true,
+  "Appearance": {
+    "SlimRowsRetained": true,
+    "EventScaleIndependent": true,
+    "EventOpacityIndependent": true
+  },
+  "FeaturesAdded": [
+    "Encounter history search",
+    "Same-target comparison",
+    "Independent event appearance",
+    "Correct ComboBox selection display"
+  ],
+  "HistoryPersistence": "Existing bounded session history only"
+}

@@ -1,131 +1,156 @@
-# FooMeter Linux preview (based on 0.10.29)
+# FooMeter Linux · expanded UI
 
-This is an initial Linux port of the uploaded FooMeter 0.10.29 source, with an
-Avalonia desktop frontend. It reuses the actual combat parser, admission filters,
-HP-based healing reconciliation, timers, pet collection tracking and history
-storage. It is not a feature-complete replacement for the Windows application.
+Based on the uploaded FooMeter 0.10.29 source. The Linux application now has a
+compact overlay and separate settings, capture, history, skill, event and pet
+windows. It uses the original core parser and storage with an Avalonia frontend.
+It is a Linux rebuild, not the Windows executable running under Wine.
 
-## CachyOS / Arch / Hyprland
+## Install / update on CachyOS
 
-Install the native dependencies in a terminal (these commands also work in fish):
+Close the running copy before replacing its folder. Download and extract the new
+`FooMeter-linux-x64-preview.tar.gz` into a fresh directory. Your Linux profile
+under `~/.local/share/FooMeter` (or `$XDG_DATA_HOME/FooMeter`) is retained.
 
-```sh
-sudo pacman -Syu --needed wireshark-cli xorg-xwayland libx11 libice libsm libxrandr libxi libxcursor fontconfig freetype2
-```
+Required packages:
 
-Enable capture for your user using Arch's Wireshark group:
-
-```sh
+```fish
+sudo pacman -Syu --needed wireshark-cli xorg-xwayland libx11 libxext libice libsm libxrandr libxi libxcursor fontconfig freetype2 libnotify
 sudo usermod -aG wireshark (whoami)
 ```
 
-The command above uses **fish** syntax. In bash use `sudo usermod -aG wireshark "$(whoami)"`.
-Log out of your desktop session and log back in for group membership to take
-effect. The Arch `wireshark-cli` package supplies `dumpcap` and its capture
-permissions; do not grant capabilities to FooMeter or the shared dotnet runtime.
+The group command uses fish syntax. In bash use `sudo usermod -aG wireshark "$(whoami)"`.
+Log out and back in after changing group membership. Check `dumpcap -D` as your
+ordinary user. The package supplies dumpcap's capture permissions; do not grant
+capabilities to FooMeter or dotnet, and do not launch the GUI with sudo.
 
-Check as your ordinary user:
+From the extracted `FooMeter-linux-x64` folder:
 
-```sh
-dumpcap -D
-```
-
-If you get a permission error, inspect `id -nG`, `ls -l /usr/bin/dumpcap` and
-`getcap /usr/bin/dumpcap`. Expected packet capture capabilities are
-`cap_net_admin,cap_net_raw`; use the distribution's Wireshark setup instructions
-to restore missing package permissions. Do not run the GUI with sudo.
-
-Extract `FooMeter-linux-x64-preview.tar.gz`, open a terminal in the extracted
-`FooMeter-linux-x64` folder, and run:
-
-```sh
+```fish
 ./run-foometer.sh --demo
 ```
 
-The demo uses **synthetic** combat and never writes a profile. To capture, close
-the demo and run:
+Close the demo and run `./run-foometer.sh` for live capture. The first launch opens
+Capture so you can pick an adapter. For the supplied PC, Ethernet is likely
+`enp4s0`; `any` also works. Start before entering your character. Once selected,
+the saved adapter starts automatically on subsequent launches. The default TCP
+port is 13328; Capture settings can override it. A VPN must expose decrypted game
+traffic on the selected adapter. .NET is bundled in the download.
 
-```sh
-./run-foometer.sh
+## Interface
+
+Drag the dotted grip to move the combat overlay. The **☰ menu** opens:
+
+- **Capture:** adapters, port, refresh, start/stop and detailed capture status.
+- **Settings:** General, Capture, Appearance, Events, Pets, Share, Scores and Linux.
+  Includes import/export, independent overlay scale/opacity, colors, privacy,
+  capture scope, encounter duration, dummy limits, server and timer preferences.
+- **History:** search, multi-select comparison, deletion confirmation, CSV/JSON
+  exports, chat copy and player details. Ctrl-click two fights to compare them.
+- **Events:** separate movable window with schedules, observed field bosses and
+  local reminders. Unknown game values remain unknown.
+- **Pets:** separate portrait window, search, pins, hide-maxed and pinned-only.
+  Soul pickup cards appear from received game packets.
+- **Healing view:** changes the combat rows to HP-based estimated healing/HPS.
+- **One-line strip:** switches the combat overlay to a small summary.
+- **Copy / export:** shares the current encounter; name privacy applies to chat.
+- **Click-through:** passes clicks through the combat overlay. Hold Alt to
+  interact temporarily. Escape restores input while the window has focus.
+- **Linux integration:** command bindings, optional OCR, reminders, diagnostics,
+  profile folder and the Linux update page.
+
+Click a combat row to open its complete skill breakdown: sorting by damage,
+healing, hits, crits or maximum hit, plus a per-second damage timeline. Boss HP,
+estimated defeat time and berserk information are shown only when supported by
+observed data and the bundled catalogue. Manual personal GS/CP fallback entries
+must match your exact character name and server; they are marked with `*`.
+
+Appearance changes apply live and persist. Use **Save and apply** in Settings.
+Saved positions, settings, pet data and history are separate from Windows data.
+Settings import preserves the previous Linux settings as a timestamped backup.
+No Windows profile is automatically modified.
+
+## Hyprland, input and tray
+
+The app currently uses XWayland. Keep it enabled. Your compositor controls
+floating/pinning and whether windows can appear above fullscreen games. Borderless
+windowed game mode is the recommended starting point. The combat, pet and event
+windows have drag grips and position-lock settings.
+
+X11 click-through and restoring input are tested. Alt key visibility while a
+native Wayland game has focus depends on XWayland/Hyprland. Use the command below
+as an independent recovery binding so input can always be restored:
+
+```ini
+# Replace the path with your actual extracted application directory.
+bind = CTRL SHIFT, F12, exec, /home/fooyer/Downloads/FooMeter-linux-x64/run-foometer.sh --command clickthrough
+bind = CTRL SHIFT, F10, exec, /home/fooyer/Downloads/FooMeter-linux-x64/run-foometer.sh --command toggle
+bind = CTRL SHIFT, F9, exec, /home/fooyer/Downloads/FooMeter-linux-x64/run-foometer.sh --command reset
+bind = CTRL SHIFT, F11, exec, /home/fooyer/Downloads/FooMeter-linux-x64/run-foometer.sh --command copy
+bind = CTRL SHIFT, F6, exec, /home/fooyer/Downloads/FooMeter-linux-x64/run-foometer.sh --command strip
+bind = CTRL SHIFT, F7, exec, /home/fooyer/Downloads/FooMeter-linux-x64/run-foometer.sh --command events
 ```
 
-Choose the actual Ethernet interface (for the supplied screenshot, likely
-`enp4s0`) or `any`, then press **Start before entering your character**. Interface
-names vary; use the list rather than hard-coding a name. Choose your VPN tunnel
-if it carries decrypted game traffic. Capture filters TCP port **13328**, as used
-by this source version; game updates or a different regional protocol may need
-parser changes. No process-name detection is required for Wine/Proton.
+Additional commands: `show`, `hide`, `pets`, `settings`, `quit`. These communicate
+with the running live instance over a user-only local socket. Demo mode does not
+register a command socket. A second live launch shows the existing instance.
 
-The UI runs through **XWayland**, not native Wayland. Keep XWayland enabled in
-Hyprland. A normal floating window works first; use **Keep above** and your
-compositor's rules to position it over a borderless game. Exclusive fullscreen
-and compositor policies may prevent an overlay from appearing above the game.
+The tray icon offers show/hide, settings, reset, copy, events, pets and quit.
+Enable a tray module in your Waybar/panel for it to be visible. Notifications use
+`notify-send`; your desktop must run a notification daemon. Settings controls
+are not registered as global X11 grabs; compositor bindings work with the game
+focused and avoid grabbing unrelated desktop keys.
 
-Run `hyprctl clients` to confirm the window title (`FooMeter Linux`). If desired,
-add floating/pinned window rules matching that title, using the syntax documented
-for your installed Hyprland version. Compositor rules and game stacking are not
-verified by the X11 smoke test. No existing Hyprland configuration is edited by
-this package.
+## Optional loot-row recognition
 
-The Linux x64 download includes .NET; a .NET installation is not required to run
-it. This build was tested on a Linux X11 dummy display, not your CachyOS desktop.
-
-## What is included
-
-- Live packet input from `dumpcap`, including Linux cooked SLL/SLL2 capture.
-- Self/confirmed party combat against recognized bosses and training dummies.
-- Damage, DPS, observed GS/CP, HP-based healing estimates and skill details.
-- Three recurring event schedules and observed field-boss timers.
-- All 207 bundled pet names, search and packet-derived soul progress. Unknown
-  totals remain unknown. Pet portraits are not included in this frontend.
-- Completed encounter history, stored separately under
-  `${XDG_DATA_HOME:-~/.local/share}/FooMeter` along with pets and boss observations.
-  Existing Windows profiles are not modified or automatically imported.
-- A normal resizable desktop window with a Keep above toggle.
-
-The initial port ends encounters after 20 seconds without admitted activity or
-observed boss death. It does not yet reproduce every Windows lifecycle setting.
-
-Not ported: loot-row OCR/counters, global hotkeys, click-through/Alt interaction,
-tray integration, appearance preferences, CSV/export UI, automatic Windows
-updater, and the full Windows overlay layout. No game process injection or
-memory access is used. No raw packet files are recorded by live capture.
-
-## Diagnostics and replay
-
-The **Info** tab shows packets, TCP payloads, frames, events and identity status.
-Packets alone do not mean game events were recognized. Capturing after login
-can miss the identity snapshot; capture before entering the character and zone.
-
-```sh
-./run-foometer.sh --devices
-./run-foometer.sh --self-test-linux
-./run-foometer.sh --replay /path/to/recording.pcap
+```fish
+sudo pacman -S --needed grim slurp tesseract tesseract-data-eng
 ```
 
-Replay accepts classic pcap, with little/big endian and micro/nanosecond times.
-For pcapng, convert locally using Wireshark's `editcap -F pcap input.pcapng output.pcap`.
-Offline replay prints JSON and does not alter your live profile. Recordings may
-contain character names and other private traffic; keep them local.
+Open **Linux integration → Choose loot region**, select only the game's loot
+text, then **Start loot reader**. The opt-in reader takes temporary regional
+screenshots with `grim` and uses offline English Tesseract TSV output to locate
+`Soul: ...` rows. Counters follow the rows in a transparent, input-pass-through
+window beside the selected region. OCR never adds souls or invents collection
+progress. A `*` marks saved/unconfirmed progress. Stop the reader from the same
+menu. Choose the region again if the game, monitor layout or scale changes.
 
-## Build from source
+Temporary screenshots are user-readable only and removed when the reader stops.
+The live screencopy path requires Hyprland's screencopy support. Multi-monitor
+fractional scaling and native Wayland input/placement still need testing on the
+actual desktop; the cloud test display cannot establish those behaviors.
 
-Install .NET SDK 10 on your development machine, then:
+## Build and checks
 
-```sh
-bash build-linux.sh
-```
+Install .NET SDK 10, then run `bash build-linux.sh`. It builds the Linux-only
+solution, runs the existing 555 core checks plus Linux model/persistence/export
+and OCR checks, and publishes the self-contained linux-x64 package.
 
-This builds the Linux-only solution, runs the existing core suite plus Linux
-capture checks, runs the Linux model smoke check, and publishes a self-contained
-linux-x64 package under `artifacts/`. The original `AscendAPP.slnx` and Windows
-frontend are retained. With an X11 display, an additional GUI smoke check is:
+With an X11 display, run:
 
 ```sh
 dotnet run --project src/FooMeter.Linux -c Release -- --smoke-ui /tmp/foometer-ui.json
 ```
 
-It checks rendered synthetic combat, writes JSON and a screenshot, then exits.
-Successful synthetic tests do not establish current live game protocol support.
-Live game capture, CachyOS group permissions and Hyprland stacking require testing
-on the user's machine.
+The smoke run visits all settings tabs, changes and saves an accent, opens the
+separate windows, checks history comparison, X11 input-shape restoration and
+command IPC, then writes JSON and screenshots. All combat/history used by it is
+labelled synthetic and it never writes your real profile.
+
+Other diagnostics:
+
+```sh
+./run-foometer.sh --devices
+./run-foometer.sh --self-test-linux
+./run-foometer.sh --replay /path/to/recording.pcap
+./FooMeter.Linux --ocr-image /path/to/loot-screenshot.png
+```
+
+Replay accepts classic pcap and does not write live history. Convert pcapng with
+`editcap -F pcap input.pcapng output.pcap`. Keep captures and screenshots private.
+
+Windows-specific APIs and the Windows installer/updater are replaced by Linux
+capture, X11 input shapes, compositor commands, screenshot tools and manual Linux
+package updates. Live Aion 2, actual Hyprland stacking, tray hosting, notifications
+and screencopy must be tested on your PC. Passing synthetic checks is not proof
+of compatibility with future game patches. The Windows frontend and solution
+remain in the source archive for reference.

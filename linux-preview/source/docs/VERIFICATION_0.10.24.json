@@ -1,0 +1,49 @@
+{
+  "Version": "0.10.24",
+  "Date": "2026-10-28",
+  "Build": {
+    "Warnings": 0,
+    "Errors": 0
+  },
+  "CoreChecks": 542,
+  "NativeWpfChecks": 169,
+  "TotalChecks": 711,
+  "LiveGameVerified": false,
+  "LiveCaptureStarted": false,
+  "ActualGameProfileRequested": false,
+  "MapRemoved": true,
+  "MapServerRequired": false,
+  "ClassIcons": {
+    "Count": 9,
+    "OriginalBytesVerified": true,
+    "Embedded": true,
+    "Revision": "03026182c4ae2059b41804189852af6e945e365a"
+  },
+  "MeterPreview": {
+    "Previous": {
+      "Width": 420,
+      "Height": 416
+    },
+    "Current": {
+      "Width": 420,
+      "Height": 328
+    },
+    "RowHeight": 26,
+    "RowGap": 3,
+    "FooterHeight": 30
+  },
+  "CoreAssemblyBytes": {
+    "Previous": 4230656,
+    "Current": 327168
+  },
+  "PreviewEvidence": [
+    "slim-final.png",
+    "slim-minimal.png",
+    "slim-healing.png",
+    "slim-idle.png",
+    "slim-settings.png",
+    "slim-target-skills.png",
+    "slim-events.png"
+  ],
+  "SettingsRetained": true
+}

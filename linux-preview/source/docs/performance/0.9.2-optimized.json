@@ -1,0 +1,94 @@
+{
+  "Version": "0.9.2.0",
+  "Runtime": "10.0.13",
+  "LogicalCpus": 16,
+  "Synthetic": true,
+  "ExpectedDamage": 92184040,
+  "ObservedDamage": 92184040,
+  "Results": [
+    {
+      "Name": "idle",
+      "Iterations": 500,
+      "Passes": [
+        {
+          "MillisecondsPerRefresh": 0.0036106,
+          "CpuMillisecondsPerRefresh": 0,
+          "BytesPerRefresh": 1353.312
+        },
+        {
+          "MillisecondsPerRefresh": 0.0034562,
+          "CpuMillisecondsPerRefresh": 0,
+          "BytesPerRefresh": 1353.312
+        },
+        {
+          "MillisecondsPerRefresh": 0.0036396,
+          "CpuMillisecondsPerRefresh": 0,
+          "BytesPerRefresh": 1353.312
+        }
+      ]
+    },
+    {
+      "Name": "15-minute 4-player fight / 36000 hits \u002B tracker",
+      "Iterations": 200,
+      "Passes": [
+        {
+          "MillisecondsPerRefresh": 0.0485065,
+          "CpuMillisecondsPerRefresh": 0,
+          "BytesPerRefresh": 7355.28
+        },
+        {
+          "MillisecondsPerRefresh": 0.048238,
+          "CpuMillisecondsPerRefresh": 0.078125,
+          "BytesPerRefresh": 7355.28
+        },
+        {
+          "MillisecondsPerRefresh": 0.049205500000000006,
+          "CpuMillisecondsPerRefresh": 0.078125,
+          "BytesPerRefresh": 7355.28
+        }
+      ]
+    },
+    {
+      "Name": "same fight \u002B WPF layout",
+      "Iterations": 100,
+      "Passes": [
+        {
+          "MillisecondsPerRefresh": 0.154624,
+          "CpuMillisecondsPerRefresh": 0.15625,
+          "BytesPerRefresh": 11982.56
+        },
+        {
+          "MillisecondsPerRefresh": 0.140009,
+          "CpuMillisecondsPerRefresh": 0.15625,
+          "BytesPerRefresh": 11982.56
+        },
+        {
+          "MillisecondsPerRefresh": 0.168159,
+          "CpuMillisecondsPerRefresh": 0.15625,
+          "BytesPerRefresh": 12437.28
+        }
+      ]
+    },
+    {
+      "Name": "same fight \u002B new hits \u002B WPF layout",
+      "Iterations": 100,
+      "Passes": [
+        {
+          "MillisecondsPerRefresh": 1.658099,
+          "CpuMillisecondsPerRefresh": 1.40625,
+          "BytesPerRefresh": 90946.16
+        },
+        {
+          "MillisecondsPerRefresh": 1.741358,
+          "CpuMillisecondsPerRefresh": 1.40625,
+          "BytesPerRefresh": 92833.68
+        },
+        {
+          "MillisecondsPerRefresh": 1.6487100000000001,
+          "CpuMillisecondsPerRefresh": 2.1875,
+          "BytesPerRefresh": 92348.8
+        }
+      ]
+    }
+  ]
+}

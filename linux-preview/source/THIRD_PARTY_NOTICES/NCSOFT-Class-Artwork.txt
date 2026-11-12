@@ -1,0 +1,10 @@
+The nine class emblems in Assets/Classes are NCSOFT game artwork, included for
+class identification in this local companion application at the user's request.
+Artwork is not relicensed by AscendAPP's code notices.
+Source: SkeeveAN/Aion-DPS-Meter, Client/assets/classes/icons, revision
+03026182c4ae2059b41804189852af6e945e365a.
+https://github.com/SkeeveAN/Aion-DPS-Meter/tree/03026182c4ae2059b41804189852af6e945e365a/Client/assets/classes/icons
+See also upstream artwork provenance in Tools/aion2-icons/README.md.
+
+0.10.25: Only the original class emblems remain in the application. The target
+skill overlay and its runtime skill-icon downloads were removed.

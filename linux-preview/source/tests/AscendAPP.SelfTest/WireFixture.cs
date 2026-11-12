@@ -1,0 +1,1 @@
+internal static class WireFixture { public static byte[] V(uint n){var b=new List<byte>();do{byte x=(byte)(n&127);n>>=7;b.Add((byte)(x|(n>0?128:0)));}while(n>0);return b.ToArray();} public static byte[] J(params byte[][] p)=>p.SelectMany(x=>x).ToArray(); }

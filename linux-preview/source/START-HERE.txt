@@ -1,0 +1,5 @@
+FooMeter 0.10.29 SOURCE
+
+This is the developer source package. To run the app, extract the separate Windows ZIP and start FooMeter.exe. Do not merge the Windows and Source packages.
+
+Build AscendAPP.slnx using the .NET 10 SDK on Windows. See README.md and docs/LOOT_COUNTER_0.10.29.md for setup, changes and verification limits. Your settings remain in the shared application profile across versions.

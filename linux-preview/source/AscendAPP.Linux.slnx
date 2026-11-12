@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="src/AscendAPP.Core/AscendAPP.Core.csproj" />
+  <Project Path="src/FooMeter.Linux/FooMeter.Linux.csproj" />
+  <Project Path="tests/AscendAPP.SelfTest/AscendAPP.SelfTest.csproj" />
+</Solution>

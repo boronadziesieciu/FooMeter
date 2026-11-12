@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="src/AscendAPP.Core/AscendAPP.Core.csproj" />
+  <Project Path="src/AscendAPP.Desktop/AscendAPP.Desktop.csproj" />
+  <Project Path="tests/AscendAPP.SelfTest/AscendAPP.SelfTest.csproj" />
+</Solution>

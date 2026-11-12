@@ -1,0 +1,42 @@
+{
+  "Product": "FooMeter",
+  "Version": "0.10.29",
+  "Date": "2026-11-03",
+  "CoreChecks": 541,
+  "NativeUiChecks": 220,
+  "TotalChecks": 761,
+  "BuildWarnings": 0,
+  "BuildErrors": 0,
+  "EmbeddedAdministratorManifest": true,
+  "LiveGameVerified": false,
+  "LiveScreenRecognitionVerified": false,
+  "ActualUserProfileAccessed": false,
+  "NativeCaptureStarted": false,
+  "DpsBar": {
+    "Layout": "Class icon · Name · GS · CP grouped on the left; DPS and total right aligned",
+    "RowHeight": 26,
+    "LongNames": "Ellipsis and full tooltips"
+  },
+  "LootCounter": {
+    "Style": "Beside loot rows",
+    "UsesLocalEnglishOcr": true,
+    "CounterOnlyAction": true,
+    "ConfigurableCrop": true,
+    "RecognizedSuppliedScreenshotPet": "Guardite",
+    "NoOcrMutationOfSoulTotals": true,
+    "NoLiveGameAlignmentVerified": true
+  },
+  "Dependencies": [
+    "Tesseract 5.2.0 .NET wrapper",
+    "Bundled native Tesseract/Leptonica",
+    "English tessdata_fast model"
+  ],
+  "EnglishModelSHA256": "7d4322bd2a7749724879683fc3912cb542f19906c83bcc1a52132556427170b2",
+  "PetPortraits": 207,
+  "PreviewData": "Clearly labelled synthetic DEMO values",
+  "BinarySHA256": {
+    "FooMeter.exe": "e37d63f69946285950eee514efceaf0ba812e7739e397eae601968b308a458e0",
+    "FooMeter.dll": "742884f547162c69cbd7e1a94fe61f05623ce85fd1eb5ce2c1abf260d0f0cf9e",
+    "AscendAPP.Core.dll": "4eb080c43d33cfbbfb8902b026643f906cd1f5c44c432bef5883b16d976339d8"
+  }
+}

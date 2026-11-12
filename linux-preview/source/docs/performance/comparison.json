@@ -1,0 +1,38 @@
+[
+  {
+    "Scene": "idle",
+    "BeforeMs": 0.0043732,
+    "AfterMs": 0.0036106,
+    "TimeReduction": 0.17438031647306318,
+    "BeforeBytes": 2161.312,
+    "AfterBytes": 1353.312,
+    "AllocationReduction": 0.3738469966390785
+  },
+  {
+    "Scene": "15-minute 4-player fight / 36000 hits + tracker",
+    "BeforeMs": 3.1113695000000003,
+    "AfterMs": 0.0485065,
+    "TimeReduction": 0.9844099198118385,
+    "BeforeBytes": 9184003.28,
+    "AfterBytes": 7355.28,
+    "AllocationReduction": 0.9991991204950876
+  },
+  {
+    "Scene": "same fight + WPF layout",
+    "BeforeMs": 11.415143,
+    "AfterMs": 0.154624,
+    "TimeReduction": 0.9864544841882401,
+    "BeforeBytes": 9642871.04,
+    "AfterBytes": 11982.56,
+    "AllocationReduction": 0.998757365939014
+  },
+  {
+    "Scene": "same fight + new hits + WPF layout",
+    "BeforeMs": 11.215734,
+    "AfterMs": 1.658099,
+    "TimeReduction": 0.8521631308303139,
+    "BeforeBytes": 9854327.52,
+    "AfterBytes": 92348.8,
+    "AllocationReduction": 0.9906286045584975
+  }
+]

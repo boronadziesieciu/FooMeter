@@ -1,0 +1,13 @@
+FooMeter 0.10.29 OCR components
+Tesseract .NET wrapper 5.2.0
+Copyright 2012-2020 Charles Weld. Apache License 2.0.
+Official package: https://www.nuget.org/packages/Tesseract/5.2.0
+
+Native Tesseract 5 OCR engine: Apache License 2.0.
+Native Leptonica 1.82.0: Leptonica BSD-style license.
+The official wrapper package distributes its matching x64/x86 libraries.
+The full Apache license is in Tessdata-Apache-2.0.txt. Leptonica license is supplied separately.
+
+English model from tesseract-ocr/tessdata_fast, Apache License 2.0.
+Model SHA256: 7d4322bd2a7749724879683fc3912cb542f19906c83bcc1a52132556427170b2.
+No source code from the Kisk app is included.

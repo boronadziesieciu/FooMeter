@@ -1,0 +1,55 @@
+{
+  "Product": "FooMeter",
+  "Version": "0.10.28",
+  "Date": "2026-11-02",
+  "CoreChecks": 530,
+  "NativeUiChecks": 214,
+  "TotalChecks": 744,
+  "BuildWarnings": 0,
+  "BuildErrors": 0,
+  "EmbeddedAdministratorManifest": true,
+  "LiveGameVerified": false,
+  "LivePetCapturesVerified": false,
+  "ActualUserProfileAccessed": false,
+  "NativeCaptureStarted": false,
+  "NewRuntimeDependencies": [],
+  "PetPortraits": {
+    "Count": 207,
+    "Size": "64x64 PNG",
+    "OfflineEmbedded": true,
+    "AllManifestHashesMatched": true,
+    "Copyright": "NCSOFT / NC",
+    "Sources": "data/pet_art_sources.json"
+  },
+  "EventOverlay": {
+    "LogicalWidth": 300,
+    "DefaultSixTimerHeightAtMost": 260,
+    "RowHeight": 24
+  },
+  "ThemeChecks": [
+    "live updates on existing windows",
+    "saved hex colors",
+    "independent flame",
+    "runtime window/tray icon",
+    "light-background contrast"
+  ],
+  "PetSyncChanges": [
+    "coalesced own-record/ticket ordering regression",
+    "raw-frame versus published-message diagnostics",
+    "report Pets section",
+    "unknown totals never fabricated"
+  ],
+  "PreviewData": "Synthetic DEMO values; no real game values fabricated",
+  "Previews": [
+    "meter-final.png",
+    "light-final.png",
+    "events-final.png",
+    "pets-final.png",
+    "pickup-final.png",
+    "appearance-final.png",
+    "minimal-final.png",
+    "strip-final.png",
+    "history-final.png",
+    "waiting-final.png"
+  ]
+}

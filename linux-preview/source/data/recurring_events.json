@@ -1,0 +1,31 @@
+{
+  "source": "Selected UTC schedule facts from SkeeveAN/Aion-DPS-Meter @ 53033afadf3395dd47708abb308346734d8b1a8a; MIT. Schedule estimates; not live confirmations. Global rift phase may differ; user adjustment is supported.",
+  "timeZone": "UTC",
+  "events": [
+    {
+      "id": "shugo_festival",
+      "name": "Shugo Festival",
+      "periodMinutes": 60,
+      "anchorMinuteUtc": 0,
+      "windowMinutes": 10,
+      "icon": "Spark"
+    },
+    {
+      "id": "spacetime_rift",
+      "name": "Spacetime Rifts",
+      "periodMinutes": 180,
+      "anchorMinuteUtc": 0,
+      "windowMinutes": 10,
+      "icon": "Portal"
+    },
+    {
+      "id": "dimensional_invasion",
+      "name": "Dimensional Invasion",
+      "periodMinutes": 60,
+      "anchorMinuteUtc": 30,
+      "windowMinutes": 10,
+      "icon": "Combat",
+      "possible": true
+    }
+  ]
+}

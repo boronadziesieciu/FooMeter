@@ -1,0 +1,35 @@
+{
+  "Version": "0.10.27",
+  "Product": "FooMeter",
+  "Date": "2026-11-02",
+  "CoreChecks": 511,
+  "NativeUiChecks": 194,
+  "TotalChecks": 705,
+  "BuildWarnings": 0,
+  "BuildErrors": 0,
+  "PreviewData": "Synthetic Demo; no live combat values",
+  "LivePetCapturesVerified": false,
+  "NativeCaptureStarted": false,
+  "ActualUserProfileAccessed": false,
+  "CompetitorBinariesRun": false,
+  "NewRuntimePackages": [],
+  "EmbeddedAdministratorManifest": true,
+  "EmbeddedPinkFlame": true,
+  "ArchiveLimits": {
+    "PetCharacters": 32,
+    "PetsPerCharacter": 1024,
+    "Pins": 128,
+    "PetFileBytes": 2097152
+  },
+  "Previews": [
+    "meter-final.png",
+    "pets-final.png",
+    "events-final.png",
+    "settings-final.png",
+    "strip-final.png",
+    "minimal-final.png",
+    "history-final.png",
+    "waiting-final.png"
+  ],
+  "Guide": "docs/PET_TRACKER_0.10.27.md"
+}

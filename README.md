@@ -28,10 +28,13 @@ An experimental Linux version based on FooMeter 0.10.29 is available to try.
 [CachyOS setup guide](https://github.com/boronadziesieciu/FooMeter/blob/linux-preview/linux-preview/README-LINUX.md) ·
 [Source and preview details](https://github.com/boronadziesieciu/FooMeter/tree/linux-preview/linux-preview)
 
-Includes combat, skills, timers, pet progress and history. Uses XWayland and the
-Linux `dumpcap` helper. Loot-row OCR, click-through and global hotkeys are not yet
-ported. Core and X11 smoke tests pass; live game capture and Hyprland behavior
-still need testing on your machine. Read the setup guide before capturing.
+The expanded Linux rebuild includes the compact combat overlay, persistent
+settings, skill breakdowns, history comparison and exports, separate event and
+pet windows with portraits, tray controls and reminders. It also includes X11
+click-through, Hyprland command bindings and optional offline loot-row OCR.
+Uses XWayland and the Linux `dumpcap` helper. Core and UI checks pass; compositor
+stacking, native Wayland Alt interaction and live screencopy still need testing
+on your desktop. Read the setup guide for dependencies, controls and limits.
 
 ## Your fight, at a glance
 

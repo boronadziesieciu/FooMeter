@@ -1,2 +1,2 @@
-54ebfce83dc1fe1ed83315178814bd07411c0cff65d465b7b1e46b07e49404eb  FooMeter-linux-x64-preview.tar.gz
-f092cdafb0f08eaff6dfac6b624ab457d321f4898709bd1be42a568a3e212a05  FooMeter-linux-preview-source.zip
+006d9e1b010dae056d7bf6747c16c71d1652f6984c099997a3968c11e1fbf9e7  FooMeter-linux-x64-preview.tar.gz
+b0b1997a54db6b247e524b8e46e7c63ccf5223e1f3236dc1c61964e136de81cc  FooMeter-linux-preview-source.zip

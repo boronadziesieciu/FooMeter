@@ -36,9 +36,35 @@ the saved adapter starts automatically on subsequent launches. The default TCP
 port is 13328; Capture settings can override it. A VPN must expose decrypted game
 traffic on the selected adapter. .NET is bundled in the download.
 
+## Compact HUD update
+
+The default combat window now follows the supplied A2tools HUD reference:
+380 pixels wide, a target toolbar, thin HP strip, 22-pixel ranked blue damage
+rows and a small footer. At 100% scale the single-player HUD is 380 × 88 pixels,
+two players are 380 × 112, and strip mode is 380 × 31. Larger parties scroll within
+a bounded row area. Capture details, settings and diagnostics open separately.
+Unknown HP stays unknown; the HUD does not fabricate latency or game data.
+
+Events use a 300-pixel single-line list (262 pixels tall with the default timers).
+Pets use the Windows source's 350-pixel portrait layout with a 235-pixel scrolling
+list, search, pins and a small footer. Both windows size to their visible content.
+
+On Hyprland, FooMeter uses `hyprctl` to float and resize **its own overlay clients**
+when they appear or change size. It matches both the process ID and window title,
+and does not change your global configuration or other windows. This prevents
+the compositor from tiling the HUD into half of the screen. Actual compositor
+behavior still needs verification on your CachyOS session. If automatic sizing
+fails, configure floating rules for `FooMeter Linux`, `FooMeter · Events` and
+`FooMeter · Pets` using your installed Hyprland version's rule syntax.
+
+The HUD visual reference is the supplied screenshot and
+[taengu/A2Tools-DPS-Meter](https://github.com/taengu/A2Tools-DPS-Meter).
+The pet/event panel dimensions and spacing follow the original Windows FooMeter
+XAML. The implementation continues to use FooMeter's existing core and Avalonia.
+
 ## Interface
 
-Drag the dotted grip to move the combat overlay. The **☰ menu** opens:
+Drag the target title to move the combat HUD, or the dotted grip on the pet/event panel. The **☰ menu** opens:
 
 - **Capture:** adapters, port, refresh, start/stop and detailed capture status.
 - **Settings:** General, Capture, Appearance, Events, Pets, Share, Scores and Linux.
@@ -154,3 +180,13 @@ package updates. Live Aion 2, actual Hyprland stacking, tray hosting, notificati
 and screencopy must be tested on your PC. Passing synthetic checks is not proof
 of compatibility with future game patches. The Windows frontend and solution
 remain in the source archive for reference.
+
+Additional compositor-isolation check (requires an X11 display):
+
+```sh
+python3 tests/test-hyprland-overlays.py artifacts/FooMeter-linux-x64/FooMeter.Linux
+```
+
+This supplies a mock `hyprctl` executable, verifies scoped floating/resizing and
+confirms that a foreign client is never targeted. It does not contact your actual
+compositor. The UI smoke test checks actual rendered window bounds and headers.

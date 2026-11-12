@@ -1,4 +1,4 @@
-# FooMeter Linux · expanded interface
+# FooMeter Linux · compact HUD
 
 **[Download the updated Linux x64 app](https://github.com/boronadziesieciu/FooMeter/raw/refs/heads/linux-preview/linux-preview/FooMeter-linux-x64-preview.tar.gz)** ·
 **[CachyOS setup and controls](README-LINUX.md)** ·
@@ -9,7 +9,18 @@ Close the older copy, extract the updated archive into a fresh folder, and run
 `./run-foometer.sh`. Your Linux settings, pets and history remain in the same
 user profile. .NET is included. Use `--demo` to explore without live capture.
 
-This update rebuilds the interface around the original FooMeter 0.10.29 core:
+The default overlay now follows the supplied A2tools HUD screenshot: **380 × 88
+pixels for one player**, 22-pixel ranked blue damage rows, a target toolbar, thin
+HP bar and small footer. Two players use 380 × 112; strip mode uses 380 × 31.
+The HUD grows only with visible rows, with a bounded party list. Large settings
+and diagnostic windows stay separate.
+
+On Hyprland, the app floats and resizes its own overlay clients so they are not
+tiled into half the screen. Events use a 300-pixel single-line layout; pets use
+the Windows FooMeter's 350-pixel portrait panel with a bounded scrolling list.
+See the setup guide for compositor-specific limits.
+
+The update retains the expanded interface around the original FooMeter core:
 
 - Compact combat overlay with class icons, damage/healing views, strip mode,
   colors, scaling, opacity, position locking, observed GS/CP and boss forecasts.
@@ -34,11 +45,14 @@ Linux package downloads.
 Validation includes all 555 core checks, Linux persistence/export/OCR checks,
 real Tesseract recognition on synthetic text, real dumpcap enumeration/error
 handling, and X11 UI tests for every settings tab, settings edits, history
-comparison, IPC and click-through restoration.
+comparison, IPC and click-through restoration. The compact update additionally
+checks actual window bounds, visible panel headers, pickup reopening, and scoped
+Hyprland floating/resizing with a mock compositor that includes a foreign client.
 
 The screenshots use synthetic combat and unknown pet totals, not live game data.
 
-![Combat overlay](FooMeter-linux-preview.png)
+![Single-player compact HUD — synthetic demo](FooMeterSingleRow.png)
+![Two-player compact HUD — synthetic demo](FooMeterTwoPlayers.png)
 ![Settings](FooMeterSettings.png)
 ![Pets](FooMeterPets.png)
 ![Events](FooMeterEvents.png)

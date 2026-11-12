@@ -24,6 +24,12 @@
 
 An experimental Linux version based on FooMeter 0.10.29 is available to try.
 
+The combat HUD now follows the supplied A2tools-style reference: **380 × 88 px
+for one player**, with a target toolbar, HP strip, 22px damage rows and a small
+status footer. FooMeter requests floating, content-sized overlays on Hyprland.
+
+![Linux compact HUD using synthetic demo data](https://github.com/boronadziesieciu/FooMeter/raw/refs/heads/linux-preview/linux-preview/FooMeterSingleRow.png)
+
 **[Download the Linux x64 app (.NET included)](https://github.com/boronadziesieciu/FooMeter/raw/refs/heads/linux-preview/linux-preview/FooMeter-linux-x64-preview.tar.gz)** ·
 [CachyOS setup guide](https://github.com/boronadziesieciu/FooMeter/blob/linux-preview/linux-preview/README-LINUX.md) ·
 [Source and preview details](https://github.com/boronadziesieciu/FooMeter/tree/linux-preview/linux-preview)

@@ -20,6 +20,19 @@
 
 ---
 
+## Linux preview — CachyOS / Hyprland
+
+An experimental Linux version based on FooMeter 0.10.29 is available to try.
+
+**[Download the Linux x64 app (.NET included)](https://github.com/boronadziesieciu/FooMeter/raw/refs/heads/linux-preview/linux-preview/FooMeter-linux-x64-preview.tar.gz)** ·
+[CachyOS setup guide](https://github.com/boronadziesieciu/FooMeter/blob/linux-preview/linux-preview/README-LINUX.md) ·
+[Source and preview details](https://github.com/boronadziesieciu/FooMeter/tree/linux-preview/linux-preview)
+
+Includes combat, skills, timers, pet progress and history. Uses XWayland and the
+Linux `dumpcap` helper. Loot-row OCR, click-through and global hotkeys are not yet
+ported. Core and X11 smoke tests pass; live game capture and Hyprland behavior
+still need testing on your machine. Read the setup guide before capturing.
+
 ## Your fight, at a glance
 
 <p align="center">
